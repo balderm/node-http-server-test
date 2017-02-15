@@ -16,8 +16,10 @@ exports.start = function startExpressServer () {
   app.get('/', handler.home)
   // handle requests from /cookie
   app.get('/cookie', handler.cookie)
+  // handle GET requests from /users
+  app.get('/users', handler.getUsers)
   // handle requests for weather queries
-  app.get('/:city', handler.weather)
+  app.get('/weather/:city', handler.weather)
   // handle requests from /error
   app.get('/error', handler.sendError)
   // error handling

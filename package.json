@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "standard",
-    "start": "node index.js"
+    "start": "node index.js", 
+    "debug": "node --inspect index.js"
   },
   "author": "Valerio",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
+    "pg": "^6.1.2",
+    "pg-promise": "^5.5.6",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"
   },
