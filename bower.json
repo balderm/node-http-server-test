@@ -1,0 +1,20 @@
+{
+  "name": "node-http-server-test",
+  "description": "http server test",
+  "main": "./app/index.js",
+  "authors": [
+    "Valerio"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/balderm/node-http-server-test",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap.native": "^2.0.4"
+  }
+}

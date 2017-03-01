@@ -19,7 +19,7 @@ const db = pgp(config)
 // exporting the database object for shared use
 // exports = db;
 // test connection
-exports.test = function testConnection () {
+function testConnection () {
   db.one('SELECT $1::varchar AS status', ['OK'])
     .then(data => {
       console.log('\nConnection Status: ' + data.status)
@@ -29,7 +29,7 @@ exports.test = function testConnection () {
     })
 }
 // generic method for query execution
-exports.queryAny = function queryDb(sql, value, cb) {
+function queryDb(sql, value, cb) {
   db.any(sql, value)
     .then(data => {
       cb(data)
@@ -38,3 +38,6 @@ exports.queryAny = function queryDb(sql, value, cb) {
       console.log('error happened during query', err)
     })
 }
+
+module.exports.test = testConnection
+module.exports.queryAny = queryDb

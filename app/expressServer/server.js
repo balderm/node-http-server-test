@@ -8,7 +8,7 @@ const middle = require('./middleware.js')
 const app = express()
 const port = 3000
 
-exports.start = function startExpressServer () {
+function startExpressServer () {
   // middlewares
   app.use(middle.logRequest)
   app.use(middle.appendUniqueKey)
@@ -39,3 +39,5 @@ exports.start = function startExpressServer () {
 
   console.log('Express server listening on port ' + port)
 }
+
+module.exports.start = startExpressServer
